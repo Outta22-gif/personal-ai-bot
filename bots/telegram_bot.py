@@ -47,4 +47,5 @@ app.add_handler(CommandHandler("admin", admin_panel_handler))
 app.add_handler(CommandHandler("stats", admin_stats_handler))
 
 print("🚀 Bot starting with admin panel...")
-app.run_polling()
+app.run_polling(drop_pending_updates=True)
+
