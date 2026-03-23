@@ -1,7 +1,9 @@
 import sys
 import os
-from telegram import ReplyKeyboardMarkup, KeyboardButton
-from telegram.ext import CommandHandler
+import asyncio
+import logging
+from telegram import Update, ReplyKeyboardMarkup, KeyboardButton
+from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append('..')  # Parent directory access for admin modules
 
