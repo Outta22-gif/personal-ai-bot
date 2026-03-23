@@ -54,10 +54,15 @@ Yo! Sup 👋 Choose a command:
         parse_mode='Markdown'
     )
 
-async def [function_name](update, context):
-    msg = update.message.text  ← 4 spaces!
+asyasync def chat(update, context):
+    msg = update.message.text
     print(f"👤 User: {msg}")
     await update.message.reply_chat_action("typing")
+    
+    response = client.chat(msg)
+    print(f"🤖 AI: {response[:50]}...")
+    await update.message.reply_text(response)
+
     
     response = client.chat(msg)
     print(f"🤖 AI: {response[:50]}...")
