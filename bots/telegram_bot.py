@@ -1,5 +1,7 @@
 import sys
 import os
+from telegram import ReplyKeyboardMarkup, KeyboardButton
+from telegram.ext import CommandHandler
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.append('..')  # Parent directory access for admin modules
 
