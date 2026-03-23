@@ -54,7 +54,7 @@ Yo! Sup 👋 Choose a command:
         parse_mode='Markdown'
     )
 
-asyasync def chat(update, context):
+async def chat(update, context):
     msg = update.message.text
     print(f"👤 User: {msg}")
     await update.message.reply_chat_action("typing")
