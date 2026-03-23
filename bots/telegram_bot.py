@@ -54,8 +54,8 @@ Yo! Sup 👋 Choose a command:
         parse_mode='Markdown'
     )
 
-    async def chat(update, context):
-    msg = update.message.text
+async def [function_name](update, context):
+    msg = update.message.text  ← 4 spaces!
     print(f"👤 User: {msg}")
     await update.message.reply_chat_action("typing")
     
